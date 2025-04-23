@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <title>Bumbas trajektorijas uzdevums</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .step {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .answer {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bumbas trajektorijas uzdevums</h1>
+
+  <div class="step">
+    <p><strong>1) Kādā augstumā virs zemes ir bumba, ja tā atrodas 1,8 m, 3 m no garāžas sienas?</strong></p>
+    <button onclick="toggleAnswer('answer1')">Rādīt atbildi</button>
+    <div class="answer" id="answer1">
+      <p>y(1,8) = −0,2x² + 6 = −0,2 · (1,8)² + 6 = −0,48 + 6 = <strong>5,352 (m)</strong></p>
+      <p>y(3) = −0,2x² + 6 = −0,2 · (3)² + 6 = −1,8 + 6 = <strong>4,2 (m)</strong></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <p><strong>2) Kāds ir garāžas augstums?</strong></p>
+    <button onclick="toggleAnswer('answer2')">Rādīt atbildi</button>
+    <div class="answer" id="answer2">
+      <p>y(0) = −0,2x² + 6 = −0,2 · (0)² + 6 = 0 + 6 = <strong>6 (m)</strong></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <p><strong>3) Kur nokritīs bumba? Zālienā krūmos vai dīķī?</strong></p>
+    <button onclick="toggleAnswer('answer3')">Rādīt atbildi</button>
+    <div class="answer" id="answer3">
+      <p><strong>Bumba nokritīs dīķī.</strong> (aprēķinām saknes kvadrātvienādojumam)</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleAnswer(id) {
+      const answer = document.getElementById(id);
+      answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
